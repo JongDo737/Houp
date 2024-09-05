@@ -25,7 +25,7 @@
 
 <div align="center">
 
-| **신종민** | **김세훈** | **한성익** | **이은솔** |
+| **신종민 (팀장)** | **김세훈** | **한성익** | **이은솔** |
 | :------: |  :------: | :------: | :------: |
 | [<img src="https://avatars.githubusercontent.com/u/92903481?v=4" height=150 width=150> <br/> @JongDo737](https://github.com/JongDo737) | [<img src="https://avatars.githubusercontent.com/u/101192772?v=4" height=150 width=150> <br/> @ki-met-hoon](https://github.com/ki-met-hoon) | [<img src="https://avatars.githubusercontent.com/u/108441979?v=4" height=150 width=150> <br/> @seongikx](https://github.com/seongikx) | [<img src="https://avatars.githubusercontent.com/u/165554618?v=4" height=150 width=150> <br/> @unezzol](https://github.com/unezzol) |
 | 🍉 **DevOps** | 🍋 **Backend** | 🍊 **Frontend** | 🍇 **Design** |
