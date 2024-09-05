@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("../images/waiting/page.png"); 배경 이미지 설정 */
+  background-size: contain; /* 이미지가 화면을 가득 채우도록 설정 */
+  background-repeat: no-repeat;
+  background-position: center; /* 배경 이미지 중앙에 위치 */
+}

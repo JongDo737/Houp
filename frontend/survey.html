@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="css/survey.css" />
+    <script src="js/survey.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/main/logo.png" alt="HOUP Logo" />
+      <p>Houp</p>
+    </header>
+
+    <div class="survey-container">
+      <div class="intro">
+        <h1>반가워요!</h1>
+        <h2>지금부터 간단한 설문조사를 시작할게요.</h2>
+        <div class="survey-info">
+          <img src="images/survey/timer.png" alt="timer Icon" />
+          <p>약 7분, 7개의 질문</p>
+        </div>
+      </div>
+      <div class="character-image">
+        <img src="images/survey/group.png" alt="Character Image" />
+      </div>
+      <div class="survey-steps">
+        <div class="step">
+          <p>반가워요!</p>
+          <p>좀 더 정확한 진단을 위해 간단한 몇 가지 질문을 드릴게요!</p>
+        </div>
+        <div class="step">
+          <p>설문지에 작성된 답변은 정확한 진단을 위해서만 사용되고,</p>
+          <p>이 외의 용도로는 절대로 사용되지 않습니다!</p>
+        </div>
+      </div>
+
+      <form id="surveyForm" class="surveyForm">
+        <!-- 자동 입력 버튼 -->
+        <div class="form-group">
+          <button type="button" id="autoFillButton">자동 입력</button>
+        </div>
+
+        <div class="form-group">
+          <label for="name">1. 당신의 이름은 무엇인가요? *</label>
+          <input
+            class="nameinput"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="이름을 입력해주세요."
+          />
+        </div>
+
+        <div class="form-group gender-question">
+          <label for="gender">2. 성별을 선택해주세요. *</label>
+          <div class="options">
+            <div class="option" data-value="male">
+              <img src="images/survey/man.png" alt="Male" />
+              <label for="male" class="">남성</label>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="남성"
+                style="display: none"
+              />
+            </div>
+            <div class="option" data-value="female">
+              <img src="images/survey/girl.png" alt="Female" />
+              <label for="female">여성</label>
+              <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="여성"
+                style="display: none"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="age">3. 당신의 연령대는 어떻게 되시나요? *</label>
+          <div class="age-slider">
+            <input
+              type="range"
+              id="age"
+              name="age"
+              min="0"
+              max="6"
+              value="0"
+              step="1"
+            />
+            <div class="age-labels">
+              <span>10대</span>
+              <span>20대</span>
+              <span>30대</span>
+              <span>40대</span>
+              <span>50대</span>
+              <span>60대</span>
+              <span>70대</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="occupation">4. 당신의 직업은 무엇인가요? *</label>
+          <textarea
+            type="text"
+            id="occupation"
+            name="occupation"
+            placeholder="예시: 차체를 수리하는 공장의 생산을 관리하는 공정관리자 입니다."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="pain-point">5. 아픈 부위의 포인트를 선택하세요. *</label>
+          <div class="pain-point">
+            <img
+              src="images/survey/body.png"
+              alt="Body Image"
+              class="body-image"
+            />
+            <div class="pain-points"></div>
+          </div>
+        </div>
+
+        <input type="hidden" id="painAreas" name="painAreas" value="" />
+
+        <div class="form-group">
+          <label for="existing-condition"
+            >6. 현재 앓고 있는 질병이나 기존 병력이 있나요? 있다면 자유롭게
+            서술해주세요.</label
+          >
+          <textarea
+            type="aoa"
+            id="existing-condition"
+            name="existing-condition"
+            placeholder="예시: 저는 기존에 고혈압을 앓고 있어요. 혈압약을 복용 중이며, 고혈압 관련 가족력이 있습니다."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="detailed-pain"
+            >7. 최종적으로 더 정확한 진단을 위해, 아픈 부위에 대해
+            설명해주세요.</label
+          >
+          <textarea
+            type="aoa"
+            id="detailed-pain"
+            name="detailed-pain"
+            placeholder="예시: 손목이 시큰거려요. 일을 할 때마다 손목에서 시큰한 통증이 발생하며, 특히 타이핑을 많이 할 때 통증이 심해지는 것 같아요."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="center">
+            <button type="submit">진료를 시작해요!</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .querySelectorAll(".gender-question .option")
+        .forEach((option) => {
+          option.addEventListener("click", function () {
+            document
+              .querySelectorAll(".gender-question .option")
+              .forEach((opt) => opt.classList.remove("selected"));
+            this.classList.add("selected");
+            this.querySelector('input[type="radio"]').checked = true;
+          });
+        });
+
+      document
+        .querySelectorAll(".occupation-question .option")
+        .forEach((option) => {
+          option.addEventListener("click", function () {
+            this.classList.toggle("selected");
+            this.querySelector('input[type="checkbox"]').checked =
+              !this.querySelector('input[type="checkbox"]').checked;
+          });
+        });
+    </script>
+  </body>
+</html>

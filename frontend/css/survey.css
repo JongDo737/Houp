@@ -1,0 +1,341 @@
+@font-face {
+  font-family: "neon";
+  src: url("../fonts/2/NanumSquareB.ttf") format("truetype");
+}
+
+body {
+  font-family: neon, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+header img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header p {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+.surveyForm {
+  padding-left: 100px;
+}
+
+.survey-container {
+  background-color: #6f67e5;
+}
+
+.intro {
+  color: white;
+  background-color: #6f67e5;
+  padding-top: 100px;
+  padding-left: 200px;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  visibility: hidden;
+  font-size: 4em;
+}
+
+.intro h2 {
+  visibility: hidden;
+  font-size: 3em;
+}
+
+.intro p {
+  visibility: hidden;
+  font-size: 1.2em;
+}
+
+.survey-info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  background-color: #938de9; /* 보라색 배경 */
+  padding: 0px 10px; /* 여백 추가 */
+  border-radius: 12px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 190px;
+}
+
+.survey-info img {
+  height: 30px;
+}
+
+.survey-steps {
+  background: linear-gradient(to bottom, #6f67e5, #ffffff);
+  padding-bottom: 150px;
+  padding-left: 100px;
+  line-height: 200%;
+  font-size: 1.3em;
+}
+
+.character-image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.character-image img {
+  width: 70%; /* 이미지 크기 확대 */
+  max-width: 100%; /* 반응형으로 크기 조정 */
+}
+
+.step {
+  opacity: 0; /* 처음엔 투명하게 시작 */
+  transform: translateY(50px); /* 아래로 50px 이동된 상태로 시작 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 애니메이션 적용 */
+}
+
+.step.visible {
+  opacity: 1; /* 보이도록 설정 */
+  transform: translateY(0); /* 원래 위치로 이동 */
+}
+
+.survey-steps .step {
+  background-color: #f0efff;
+  padding: 30px;
+  border-radius: 40px 40px 40px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px 50px;
+}
+
+.survey-steps .step p {
+  margin: 0;
+  color: #555;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.form-group {
+  margin: 50px 0;
+}
+
+.nameinput {
+  margin-top: 30px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.options {
+  display: flex;
+  /* justify-content: center; */
+  gap: 20px;
+}
+
+.option {
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.option label {
+  display: block;
+  margin-top: 20px; /* 텍스트와 이미지 사이의 간격 */
+  font-size: 1.2em; /* 텍스트 크기 조정 */
+  text-align: center;
+}
+
+.option.selected {
+  background-color: #655ddd;
+  border-color: #655ddd;
+  color: white;
+}
+
+/* Age Slider Styles */
+.age-slider {
+  position: relative;
+  width: 80%; /* 슬라이더의 너비 조정 */
+  margin: 40px 50px 70px; /* 중앙 정렬과 아래쪽 여백 조정 */
+}
+
+.age-slider input[type="range"] {
+  -webkit-appearance: none; /* 기본 CSS 스타일 무시 */
+  appearance: none;
+  width: 100%;
+  height: 4px; /* 슬라이더 바의 높이 */
+  background: #ccc; /* 슬라이더 바의 배경 */
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  margin-bottom: 20px; /* 슬라이더 바와 레이블 사이의 간격 */
+}
+
+.age-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: blue; /* 슬라이더 썸의 배경색 */
+  cursor: pointer;
+  border-radius: 50%; /* 원형 */
+}
+
+.age-slider input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: blue;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.age-labels {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: -10px; /* 슬라이더와 레이블 간의 간격 조정 */
+}
+
+.age-labels span {
+  font-size: 14px;
+  text-align: center;
+  flex: 1;
+  transform: translateX(-10%); /* 텍스트 위치를 조금씩 왼쪽으로 조정 */
+}
+
+.age-labels span:nth-child(1) {
+  transform: translateX(-45%);
+}
+
+.age-labels span:nth-child(2) {
+  transform: translateX(-30%);
+}
+
+.age-labels span:nth-child(3) {
+  transform: translateX(-13%);
+}
+
+.age-labels span:nth-child(4) {
+  transform: translateX(0%);
+}
+.age-labels span:nth-child(5) {
+  transform: translateX(15%);
+}
+.age-labels span:nth-child(6) {
+  transform: translateX(30%);
+}
+.age-labels span:nth-child(7) {
+  transform: translateX(45%);
+}
+
+.pain-point {
+  text-align: center;
+}
+
+.pain-point {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* 필요한 경우 조정 */
+  margin: 0 auto;
+}
+
+.body-image {
+  width: 100%;
+}
+
+.pain-points {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pain-point-marker {
+  position: absolute;
+  width: 30px; /* 크기 조정 */
+  height: 30px;
+  background: url("../images/survey/checkno2.png") no-repeat center center;
+  background-size: contain;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.pain-point-marker.checked {
+  background-image: url("../images/survey/checkok.png");
+}
+
+form textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #b2adf7;
+  background-color: #f4f4ff;
+  border-radius: 5px;
+  resize: none;
+  height: 100px;
+  margin-top: 10px;
+}
+.form-group .center {
+  text-align: center;
+}
+
+form button {
+  background-color: #655ddd;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 auto; /* 버튼을 중앙 정렬 */
+}
+
+form button:hover {
+  background-color: #3949ab;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 5px;
+  font-size: 1em;
+  outline: none;
+  transition: border-bottom 0.3s;
+  width: calc(30% - 20px);
+  margin-left: 20px;
+}
+
+input[type="text"]:focus {
+  border-bottom: 2px solid #655ddd;
+}

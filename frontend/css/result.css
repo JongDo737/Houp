@@ -1,0 +1,559 @@
+@font-face {
+  font-family: "neon";
+  src: url("../fonts/2/NanumSquareB.ttf") format("truetype");
+}
+
+body {
+  font-family: neon, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header {
+  position: relative; /* progress-bar를 기준으로 위치를 조정할 수 있게 설정 */
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+header .progress-bar {
+  position: relative;
+  z-index: 1; /* progress-bar를 뒤로 보내기 위해 낮은 z-index 설정 */
+}
+
+header .progress-bar img {
+  width: 100%;
+}
+
+.header-content {
+  position: absolute; /* progress-bar 위에 겹치도록 설정 */
+  top: 85%; /* progress-bar의 중간 정도로 올리기 */
+  left: 15%;
+  display: flex;
+  align-items: center;
+  z-index: 2; /* header-content가 progress-bar 위에 보이도록 설정 */
+}
+
+.header-icon {
+  width: 150px; /* 아이콘 크기 조절 */
+  margin-right: 50px; /* 텍스트와 아이콘 간의 간격 */
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #7a7a7a;
+}
+
+.highlight {
+  color: #714dff; /* 보라색 */
+  font-size: 1.5em;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.survey-steps .step {
+  background-color: #e4e2ff;
+  max-width: 800px;
+  padding: 10px 100px;
+  font-size: 25px;
+  line-height: 30%;
+  color: #5a5a5a;
+  border-radius: 300px 200px 200px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 70px 160px;
+  opacity: 0;
+  animation: float-up 1s ease-out forwards;
+}
+
+.survey-steps .step2 {
+  background-color: #e4e2ff;
+  max-width: 500px;
+  padding: 10px 100px;
+  font-size: 25px;
+  line-height: 30%;
+  color: #5a5a5a;
+  border-radius: 300px 200px 200px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 70px 160px;
+  opacity: 0;
+  animation: float-up 1s ease-out forwards;
+  animation-delay: 0.5s; /* 첫 번째 step 애니메이션이 끝난 후 0.5초 뒤에 시작 */
+}
+
+.disease-info {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  margin: 100px 200px 100px 200px;
+}
+
+.disease-header {
+  margin-bottom: 50px;
+}
+
+.disease-header #diseaseNameValue {
+  color: #7154e5;
+  text-align: left;
+  display: block; /* 텍스트가 왼쪽으로 정렬되도록 설정 */
+}
+
+.disease-header .icon {
+  width: 71px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.disease-header h2 {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.disease-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  flex-grow: 0.2; /* 영역 크기 확대 */
+  margin-right: 20px;
+}
+
+.robot-icon {
+  width: 50%; /* 로봇 이미지 크기 확대 */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.left-content p {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin: 0;
+}
+
+.left-content #diseaseKind {
+  font-size: 1em;
+}
+
+.doctor-message {
+  background-color: #f4f4ff;
+  border-radius: 30px 30px 30px 0px;
+  padding: 30px;
+  flex-grow: 1;
+  border: 1px solid #bab6f8;
+}
+
+.doctor-message h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.doctor-message p {
+  font-size: 24px;
+  color: #666;
+  line-height: 1.5em;
+}
+
+.ranking-chart-section {
+  margin: 40px 200px;
+  padding: 0px;
+  background-color: #fff; /* 배경색 설정 */
+}
+
+.title-container {
+  display: flex;
+  align-items: left;
+  /* justify-content: center; */
+  margin-left: 50px;
+  margin-bottom: 100px; /* 아래 여백 추가 */
+}
+
+.ranking-icon {
+  width: 50px; /* 이미지 크기 조정 */
+  margin-right: 20px; /* 텍스트와의 간격 조정 */
+}
+
+#rankingTitle {
+  font-size: 1.8em;
+  color: #333;
+  text-align: center;
+  margin: 0; /* 제목에 기본 마진 제거 */
+}
+
+#rankingTitle .place1 {
+  color: #8262ff; /* 색상 설정 */
+  font-weight: bold; /* 굵게 설정 */
+  font-size: 1.2em; /* 다른 텍스트보다 크기 증가 */
+}
+
+#rankingTitle .age,
+#rankingTitle .ranking {
+  font-weight: bold; /* 굵게 설정 */
+}
+
+.chart-container {
+  max-width: 1280px;
+  width: 100%;
+  height: 500px;
+  padding: 30px;
+  background-color: #fcf9ff;
+  border-radius: 15px;
+  border: solid 5px #d1cdff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 차트에 배경 설정 */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+.bar {
+  fill: #a8a8f7;
+  /* stroke: #7b7bdf; */
+  stroke-width: 2px;
+  transition: fill 0.3s ease;
+}
+
+.bar:hover {
+  fill: #4f46e5;
+}
+
+.bar-label {
+  font-size: 18px;
+  fill: #666;
+  text-anchor: end;
+}
+
+.bar-value {
+  font-size: 20px;
+  fill: #666;
+  text-anchor: start;
+}
+
+.rankings,
+.hospitalization,
+.outpatient {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.job-risk {
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  max-width: 1050px;
+  height: 697px;
+  padding: 40px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.job-risk h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.job-risk h2 #userName2 {
+  color: #6a5acd; /* 보라색 */
+}
+
+.job-risk .subtext {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.job-risk-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.risk-image {
+  width: 60%;
+  height: auto;
+}
+
+.risk-button {
+  background-color: #6a5acd;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.risk-button:hover {
+  background-color: #5549e1;
+}
+
+.disease-info h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.disease-info p {
+  font-size: 1em;
+  color: #666;
+}
+
+.medical-cost {
+  background: linear-gradient(90deg, #8379f8, #5549e1);
+  border-radius: 15px;
+  max-width: 1100px;
+  height: 300px;
+  color: #ffffff;
+  padding: 30px;
+  position: relative;
+  margin: 150px auto;
+}
+
+.cost-header {
+  font-size: 1.2em;
+  color: #e7e5ff;
+  margin-bottom: 20px;
+  padding-left: 100px;
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.cost-info {
+  font-size: 1.7em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  height: 100%;
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.cost-value {
+  font-size: 2.3em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 10px;
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.money-icon {
+  position: absolute;
+  bottom: 200px;
+  right: 0;
+  width: 450px;
+}
+
+.money-icon {
+  position: absolute;
+  bottom: 200px;
+  right: 0;
+  width: 450px;
+}
+
+.rate-section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 100px auto;
+}
+
+.rate-box {
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  width: 527px;
+  margin-left: 60px;
+  margin-right: 60px;
+  height: 398px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rate-box h3 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #5635d9;
+}
+
+.rate-box p {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.rate-robot-icon {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.rankings {
+  text-align: left;
+}
+
+.rankings h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.hospitalization,
+.outpatient {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1069px;
+  max-height: 739px;
+  margin: 0 auto;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.chart-header {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.chart-title {
+  font-size: 1.5em;
+  color: #8262ff;
+  margin-bottom: 10px;
+}
+
+.chart-container2 {
+  width: 100%;
+  height: 500px; /* 그래프를 크게 표시하기 위해 고정 높이를 설정 */
+}
+
+.average-days {
+  font-size: 1.2em;
+  color: #5635d9;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.average-value {
+  color: #686868;
+  margin-left: 5px;
+}
+
+.line {
+  stroke: #5635d9;
+  stroke-width: 2;
+  fill: none;
+}
+
+.dot {
+  fill: #5635d9;
+}
+
+.point-label {
+  font-size: 0.8em;
+  fill: #5635d9;
+  text-anchor: middle;
+}
+
+.axis path,
+.axis line {
+  stroke: #848484;
+}
+
+.axis .tick text {
+  fill: #848484;
+}
+
+.axis-y .tick text {
+  display: none; /* Y축의 값만 숨김 */
+}
+
+.custom-footer {
+  background: linear-gradient(to bottom, #ffffff, #e4e2ff);
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  color: #4a4a4a;
+  margin-top: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  z-index: 2;
+  position: relative;
+}
+
+.main-button {
+  background-color: #5549e1;
+  color: #ffffff;
+  border: none;
+  padding: 30px 45px;
+  margin-top: 600px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+  background-color: #8379f8;
+}
+
+.background-image {
+  position: absolute;
+  min-width: 959px;
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1;
+}

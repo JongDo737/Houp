@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>산재 처리 확률</title>
+    <link rel="stylesheet" href="css/ins.css" />
+    <script src="js/ins.js"></script>
+  </head>
+  <body>
+    <!-- 상단의 진행바 이미지 -->
+    <div class="progress-bar">
+      <img src="images/ins/fin.png" alt="Progress Bar" />
+    </div>
+
+    <!-- 산재 처리 확률 섹션 -->
+    <section class="probability-section">
+      <div class="probability-content">
+        <img src="images/ins/robot.png" alt="Robot Image" class="robot-icon" />
+        <div class="text-content">
+          <h2><span id="userName">사용자 이름</span>님의</h2>
+          <h2>
+            산재 처리 확률은 <span id="approvalProbability">0%</span>입니다.
+          </h2>
+          <h3>
+            사례를 바탕으로 적절한 보상을 받으시길 바랍니다.<br />
+            호우프는 항상 적극적으로 돕겠습니다.
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- 결론 섹션 (이미지로 대체) -->
+    <section class="conclusion-section">
+      <div class="conclusion-content">
+        <div class="title-container">
+          <img src="images/ins/bulb.png" alt="전구 이미지" class="bulb-icon" />
+          <h3>결론 - 산재가 인정되기 위해서는?</h3>
+        </div>
+        <p id="result">결론 텍스트가 여기에 들어갑니다.</p>
+      </div>
+    </section>
+
+    <!-- 산재 보험 판결 사례 섹션 -->
+    <section class="case-section">
+      <div class="case-header">
+        <img src="images/ins/hand.png" alt="손바닥 이미지" class="hand-icon" />
+        <h2>
+          <span id="userName2">사용자 이름</span>님이 <br /><span id="hoho"
+            >겪고 있는 질병과 유사한 산재보험 판결 사례 2가지</span
+          >를 들고 왔어요!
+        </h2>
+      </div>
+
+      <div class="case-tabs-container">
+        <div class="case-tabs">
+          <button class="case-tab active" onclick="showCase('first')">
+            1번 사례
+          </button>
+          <button class="case-tab" onclick="showCase('second')">
+            2번 사례
+          </button>
+        </div>
+      </div>
+
+      <div id="firstCase" class="case-content">
+        <div class="robot-title-container">
+          <img src="images/ins/yes.png" alt="로봇 이미지" class="robot-icon" />
+          <div class="text-title-container">
+            <h3>다음사례는 산재보험이 인정된 사례입니다.</h3>
+          </div>
+        </div>
+        <p id="firstCaseSummary">여기에 1번 사례 내용이 들어갑니다.</p>
+
+        <!-- 판결 데이터 확인 버튼과 확장된 데이터 표시 -->
+        <div class="full-data-section">
+          <button
+            class="show-full-data-button"
+            onclick="toggleFullData('first')"
+          >
+            <span>판결 데이터 확인하러가기</span>
+          </button>
+          <div class="full-data-content" style="display: none">
+            <p class="judgmentDocument">
+              전체 판결 데이터를 여기에 표시합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="secondCase" class="case-content" style="display: none">
+        <div class="robot-title-container">
+          <img src="images/ins/no.png" alt="로봇 이미지" class="robot-icon" />
+          <div class="text-title-container">
+            <h3>다음사례는 산재보험이 불인정된 사례입니다.</h3>
+          </div>
+        </div>
+        <p id="secondCaseSummary">여기에 2번 사례 내용이 들어갑니다.</p>
+
+        <!-- 판결 데이터 확인 버튼과 확장된 데이터 표시 -->
+        <div class="full-data-section">
+          <button
+            class="show-full-data-button"
+            onclick="toggleFullData('second')"
+          >
+            <span>판결 데이터 확인하러가기</span>
+          </button>
+          <div class="full-data-content" style="display: none">
+            <p class="judgmentDocument">
+              전체 판결 데이터를 여기에 표시합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

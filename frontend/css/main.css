@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "neon";
+  src: url("../fonts/2/NanumSquareB.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "lazy";
+  src: url("../fonts/2/NanumSquareEB.ttf") format("truetype");
+}
+
+body {
+  font-family: neon, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  text-align: center;
+  padding: 25px;
+  background-color: #ffffff;
+}
+
+header img {
+  height: 62px;
+  margin-right: 10px; /* 이미지와 텍스트 사이의 간격을 위해 추가 */
+}
+
+header p {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  background: linear-gradient(to right, #e9ebf9, #ffffff);
+  align-items: center;
+  padding: 95px 20px;
+  position: relative;
+}
+.highlight {
+  color: #655ddd;
+}
+.text-content {
+  line-height: 105%;
+  flex: 1;
+  margin-left: 200px;
+}
+
+.image-content {
+  position: absolute;
+  bottom: -103px; /* 이미지가 container 아래로 튀어나오게 설정 */
+  right: 100px; /* 오른쪽으로 정렬 */
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-content2 {
+  position: absolute;
+  top: 20px; /* 이미지가 container 아래로 튀어나오게 설정 */
+  right: 450px; /* 오른쪽으로 정렬 */
+}
+
+.image-content2 img {
+  max-width: 100%;
+  height: auto;
+}
+.container h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+.container p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.container button {
+  background-color: #655ddd;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background-color: #3949ab;
+}
+
+.howtostep3 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.howtostep3 img {
+  height: 100px;
+}
+
+.howtostep3 .quest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  gap: 20px;
+  margin-bottom: 10px; /* 이미지와 텍스트 사이의 간격을 줄이기 위해 조정 */
+}
+
+.howtostep3 p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px; /* quest 아래 p 태그의 위쪽 여백을 줄이기 위해 조정 */
+  margin-bottom: 5px; /* p 태그 아래쪽 여백을 줄여서 h5와의 간격을 줄임 */
+}
+
+.howtostep3 h5 {
+  font-family: lazy;
+  font-size: 30px;
+  color: #d1d1d1;
+  margin-top: 5px; /* h5 태그 위쪽 여백을 줄여서 p 태그와의 간격을 줄임 */
+}
+
+.weather-container {
+  width: 1118px;
+  height: 544px;
+  background: linear-gradient(to bottom, #2370a7, #8684ff);
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40px auto;
+  padding: 0px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 100px; /* 이미지와 텍스트 사이 간격 */
+}
+
+.weather-icon {
+  width: 561px;
+  height: 561px;
+  align-items: left;
+}
+
+.weather-details {
+  color: #ffffff;
+  text-align: center;
+}
+.weather-details #date {
+  font-size: 1.5em;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.weather-details #location {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.weather-details #temperature {
+  font-size: 5em; /* 온도 텍스트 크기 증가 */
+  font-weight: bold; /* 온도 텍스트 굵게 */
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.weather-details #description {
+  font-size: 2em; /* 온도 텍스트 크기 증가 */
+  font-weight: bold; /* 온도 텍스트 굵게 */
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.howtostep {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.howtostep .quest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  gap: 10px; /* 이미지와 텍스트 사이의 간격을 좁히기 위해 추가 */
+  margin-bottom: 30px; /* quest와 그 아래 p 태그 간의 간격을 줄이기 위해 추가 */
+}
+
+.howtostep p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0px; /* quest 아래 p 태그의 위쪽 여백을 줄이기 위해 추가 */
+}
+
+.howtostep h5 {
+  font-family: lazy;
+  font-size: 30px;
+  color: #d1d1d1;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 50px 20px;
+}
+
+.step {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.step img {
+  height: 100px;
+}
+
+.step h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.step p {
+  font-size: 1em;
+  color: #666;
+}
+
+.container2 {
+  display: flex;
+  background: linear-gradient(to left, #e9ebf9, #ffffff);
+  align-items: center;
+  padding: 300px 30px;
+  position: relative;
+}
+
+.container2 h1 {
+  font-size: 36px;
+  color: #717171;
+}
+
+.container2 h2 {
+  font-size: 36px;
+  color: #1d1d1d;
+}
+.container2 .text-content {
+  position: absolute;
+  bottom: 350px;
+}
+
+.image-content3 {
+  position: absolute;
+  max-width: 1550px;
+  min-width: 1200px;
+  bottom: -300px; /* 이미지가 container 아래로 튀어나오게 설정 */
+  right: 100px; /* 오른쪽으로 정렬 */
+}
+
+.image-content3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-content4 {
+  position: absolute;
+  top: 350px; /* 이미지가 container 아래로 튀어나오게 설정 */
+  left: 200px; /* 오른쪽으로 정렬 */
+}
+
+.image-content4 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.steps2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  padding: 50px 20px;
+}
+
+.step2 {
+  cursor: pointer;
+  background-color: #fbfbfb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  padding: 40px 0px 0px 0px;
+  width: 700px;
+  height: 350px;
+  text-align: center;
+  position: relative; /* relative position을 사용하여 자식 요소를 쉽게 배치 */
+}
+
+.step2 img {
+  display: inline-block; /* 이미지들이 한 줄에 배치되도록 설정 */
+  vertical-align: middle; /* 이미지들이 세로축을 기준으로 가운데 정렬되도록 설정 */
+}
+
+.step2 .arr {
+  position: absolute; /* position을 absolute로 설정하여 자유롭게 배치 */
+  right: 20px; /* 부모 요소의 오른쪽 끝에서 20px 떨어지도록 설정 */
+  top: 50%; /* 부모 요소의 세로 중앙에 배치 */
+  transform: translateY(-50%); /* 정확한 중앙 정렬을 위해 transform 사용 */
+}
+
+.step2 h1,
+.step2 p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.step img {
+  height: 100px;
+}
+
+/* .footer {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer p {
+  font-size: 1.2em;
+  color: #333;
+} */

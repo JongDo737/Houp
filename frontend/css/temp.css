@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../images/waiting/bg.png");
+  background-size: 90%;
+  background-position: center;
+  margin-top: 200px;
+}
+
+.waiting-container {
+  text-align: center;
+  padding: 10px px;
+  margin: auto;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress {
+  width: 50%; /* 예시 진행율 */
+  height: 100%;
+  background-color: #655ddd;
+  border-radius: 10px;
+}
+
+.slice {
+  background: linear-gradient(to bottom, #9e98fe, #ffffff);
+  text-align: center;
+  padding: 20px;
+  color: #333; /* 검정색 텍스트를 위한 설정 */
+  border-radius: 50px;
+  margin-top: 20px; /* 상단 여백 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+.robot img {
+  height: 150px; /* 로봇 이미지 크기 조정 */
+}
+
+.questions {
+  background-color: #fff; /* 질문 영역 배경 투명 처리 */
+  margin: 0px 100px 0px 100px;
+  padding: 140px 0px 140px; /* 패딩 값 조정 */
+  border-radius: 100px; /* 모서리 둥글게 */
+  color: #fff; /* 텍스트 색상을 흰색으로 변경 */
+}
+
+.questions .question {
+  background-color: transparent; /* 질문 항목 배경 투명 처리 */
+  margin-bottom: 20px; /* 질문 간 간격 */
+}
+
+.question h3,
+.question p {
+  color: #333; /* 텍스트 색상을 검정색으로 변경 */
+}
+
+.waiting-container h1,
+.waiting-container h3 {
+  color: #333;
+}
+
+.waiting-container small,
+.waiting-container p {
+  color: #666;
+}
+
+.highlight {
+  color: #655ddd;
+}
+
+.waiting-message {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 20px;
+}

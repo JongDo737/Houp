@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOUP</title>
+    <!--Open Graph-->
+    <!--http://ogp.me/-->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Houp" />
+    <meta property="og:title" content="House Hospital" />
+    <meta
+      property="og:description"
+      content="집에서도 간편하게 산재 보험과 건강확인을 받을수 있는 서비스,houp"
+    />
+    <meta property="og:image" content="./images/logo.png" />
+    <!-- <meta property="og:url" content="https://naver.com" /> -->
+
+    <!--Google Fonts - 나눔고딕-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/weather.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/main/logo.png" alt="HOUP Logo" />
+      <p>Houp</p>
+    </header>
+
+    <div class="container">
+      <div class="text-content">
+        <h1>집에서 느끼는 희망,</h1>
+        <h1><span class="highlight">HOUP</span>와 함께 건강을 지키세요!</h1>
+        <p>Feel the hope at home, stay healthy with HOUP!</p>
+        <a href="survey.html"><button>지금 바로 진료받기 &ensp;〉</button></a>
+      </div>
+      <div class="image-content">
+        <img src="images/main/run.png" alt="Character Image" />
+      </div>
+      <div class="image-content2">
+        <img src="images/main/pill.png" alt="pill Image" />
+      </div>
+    </div>
+
+    <div class="howtostep3">
+      <div class="quest">
+        <img src="images/main/um.png" alt="우산" class="quest" />
+        <p><span class="highlight">HOUP</span>가 알려주는 오늘의 날씨!</p>
+      </div>
+      <h5>TODAY'S WEATHER</h5>
+    </div>
+
+    <div class="weather-container">
+      <div class="weather-info">
+        <img
+          id="weather-icon"
+          src="images/main/sun.png"
+          alt="Weather Icon"
+          class="weather-icon"
+        />
+        <div class="weather-details">
+          <p id="date">2024-08-18</p>
+          <p id="location">서울특별시</p>
+          <p id="temperature">23°C</p>
+          <p id="description">
+            오늘 강한 폭우와 번개가 예상되오니, 미끄럼 사고 주의하시기 바랍니다!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="howtostep">
+      <div class="quest">
+        <img src="images/main/pill2.png" alt="알약" class="quest" />
+        <p>
+          어떻게 <span class="highlight">HOUP</span>를 이용해서 집에서 진료를
+          받을수 있어?
+        </p>
+      </div>
+      <h5>HOW TO USE HOUP?</h5>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>STEP 1</h3>
+        <img src="images/main/step1.png" alt="Step 1" />
+        <p>HOUP에 정확한 진단을 위해 간단한 설문조사를 진행해주세요!</p>
+      </div>
+      <div class="step">
+        <h3>STEP 2</h3>
+        <img src="images/main/step2.png" alt="Step 2" />
+        <p>이를 바탕으로 맞춤형 건강상담을 진행해주세요!</p>
+      </div>
+      <div class="step">
+        <h3>STEP 3</h3>
+        <img src="images/main/step3.png" alt="Step 3" />
+        <p>HOUP가 제공한 처방전을 참고하여 건강을 유지하세요!</p>
+      </div>
+    </div>
+
+    <div class="howtostep">
+      <div class="quest">
+        <img src="images/main/pill2.png" alt="알약" class="quest" />
+        <p><span class="highlight">HOUP</span>는 누구를 위한 프로그램이야?</p>
+      </div>
+      <h5>WHO IS HOUP FOR?</h5>
+    </div>
+
+    <div class="container2">
+      <div class="text-content">
+        <h1>바쁜 업무로 병원가기 힘든 직장인들,</h1>
+        <h1>수시로 건강을 체크하고 보상받고</h1>
+        <h2>싶은 누구든지!</h2>
+      </div>
+      <div class="image-content3">
+        <img src="images/main/bg.png" alt="Character Image" />
+      </div>
+    </div>
+
+    <div class="steps2">
+      <div class="step2">
+        <h1>지금 바로 HOUP와 함께</h1>
+        <p>나의 증상을 알아보고 처방 받아요!</p>
+        <img src="images/main/Vector.png" alt="arrow" class="arr" />
+        <img src="images/main/bus.png" alt="119" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const step2Element = document.querySelector(".steps2");
+
+        step2Element.addEventListener("click", function () {
+          window.location.href = "survey.html";
+        });
+      });
+    </script>
+  </body>
+</html>

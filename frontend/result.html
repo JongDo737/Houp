@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>진단 결과</title>
+    <link rel="stylesheet" href="css/result.css" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="js/result.js"></script>
+  </head>
+
+  <body class="container">
+    <header>
+      <div class="progress-bar">
+        <img src="images/result/hea.png" alt="Progress Bar" />
+      </div>
+      <div class="header-content">
+        <img
+          src="images/result/list.png"
+          alt="Checklist Icon"
+          class="header-icon"
+        />
+        <div class="header-text">
+          <h1>
+            <span id="userName" class="highlight">김세훈</span>님의 증상
+            체크완료!
+          </h1>
+          <h1>진단 결과는 다음과 같습니다.</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="survey-steps">
+      <div class="step">
+        <p>
+          확인 <span class="bold-text">증상과 관련된 정보</span>를 찾아냈습니다.
+        </p>
+        <p>
+          아래의 결과를 확인하고 자세한 진단을 위해 병원 진료를 추천드립니다.
+        </p>
+      </div>
+
+      <div class="step2">
+        <p>
+          호우프가 통계낸 <span class="bold-text">산재처리확률</span>을 확인하고
+        </p>
+        <p>
+          <span class="bold-text">유사 산재 판결 사례</span>를 확인해보세요!
+        </p>
+      </div>
+    </div>
+
+    <section class="disease-info">
+      <div class="disease-header">
+        <img src="images/result/record.png" alt="Disease Icon" class="icon" />
+        <h2 id="diseaseName">
+          <span id="diseaseNameValue"
+            >무릎의 관절 및123 인대의 탈구, 염좌 및 긴장</span
+          >
+        </h2>
+      </div>
+
+      <div class="disease-content">
+        <div class="left-content">
+          <p id="diseaseKind">
+            <span style="font-weight: bold">카테고리</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span id="diseaseKindValue">근골격계질123환 (척추질환)</span>
+          </p>
+          <img
+            src="images/result/robot.png"
+            alt="Robot Image"
+            class="robot-icon"
+          />
+        </div>
+        <div class="doctor-message">
+          <h3>닥터의 한마디</h3>
+          <p id="diseaseDescription">
+            해당 질병은 무릎 부분의 관절 및 인대에 문제가 생겼을 가능성이
+            높습니다. 환자의 증상으로는 왼쪽 무릎 부분에서 통증이 있으며, 움직일
+            때 불편함을 느낄 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 그래프 영역 -->
+    <section class="ranking-chart-section">
+      <div class="title-container">
+        <img
+          src="images/result/img.png"
+          alt="Ranking Icon"
+          class="ranking-icon"
+        />
+        <h2 id="rankingTitle">
+          <span class="place1" id="place1Name">급성 기관지염</span>은
+          <span class="age">30대</span> 평균 <span class="ranking">1위</span>위
+          질환이에요!
+        </h2>
+      </div>
+      <div id="rankingChart" class="chart-container"></div>
+    </section>
+
+    <section class="medical-cost">
+      <h2 class="cost-header">HOUP가 전반적인 병원 진료 비용을 통계낸 결과</h2>
+      <div class="cost-info">
+        <p>이 질병은 평균</p>
+        <p class="cost-value">
+          <span id="medicalCost">16,090</span>원으로 치료하고 있어요!
+        </p>
+        <img
+          src="images/result/money.png"
+          alt="Money Icon"
+          class="money-icon"
+        />
+      </div>
+    </section>
+
+    <section class="rate-section">
+      <div class="rate-box">
+        <h3>입원 확률</h3>
+        <p id="hospitalizationRate">0%</p>
+        <img
+          src="images/result/aro.png"
+          alt="Robot Image"
+          class="rate-robot-icon"
+        />
+      </div>
+      <div class="rate-box">
+        <h3>외래 확률</h3>
+        <p id="outpatientRate">0%</p>
+        <img
+          src="images/result/bro.png"
+          alt="Robot Image"
+          class="rate-robot-icon"
+        />
+      </div>
+    </section>
+
+    <section class="hospitalization">
+      <div class="chart-header">
+        <h2 class="chart-title">
+          <img src="images/result/graph.png" alt="입원 환자" class="icon" />
+          입원 환자 추이 그래프
+        </h2>
+      </div>
+      <div id="hospitalizationChart" class="chart-container2"></div>
+      <p class="average-days">
+        해당 질환으로 인한 평균 입원 일수
+        <span id="averageHospitalizationDays" class="average-value"></span>
+      </p>
+    </section>
+
+    <section class="outpatient">
+      <div class="chart-header">
+        <h2 class="chart-title">
+          <img src="images/result/graph.png" alt="외래 환자" class="icon" />
+          외래 환자 추이 그래프
+        </h2>
+      </div>
+      <div id="outpatientChart" class="chart-container2"></div>
+      <p class="average-days">
+        해당 질환으로 인한 평균 외래 일수
+        <span id="averageOutpatientDays" class="average-value"></span>
+      </p>
+    </section>
+
+    <section class="job-risk">
+      <h2><span id="userName2">김세훈</span>님의 산재 처리 확률은?</h2>
+      <p class="subtext">유사 사례와 함께 확인하러 가볼까요?</p>
+      <div class="job-risk-content">
+        <img src="images/result/man.png" alt="Risk Image" class="risk-image" />
+        <button class="risk-button" onclick="window.location.href='ins.html'">
+          산재 확률 지금 바로 확인하기
+        </button>
+      </div>
+    </section>
+
+    <div class="page-container">
+      <footer class="custom-footer">
+        <div class="footer-content">
+          <button class="main-button" onclick="location.href='index.html'">
+            메인화면으로 돌아가기
+          </button>
+        </div>
+        <img
+          src="images/result/foot.png"
+          alt="Background"
+          class="background-image"
+        />
+      </footer>
+    </div>
+  </body>
+</html>
