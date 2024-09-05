@@ -317,8 +317,8 @@ devops/
 
 ---
 
-<img src="https://github.com/user-attachments/assets/afa77282-a05f-48ed-abaf-a91075be5307" width="48%" height="20%" align="left">
-<img src="https://github.com/user-attachments/assets/c36b0f17-6a0a-41f1-8568-a2679dcc6292" width="48%" height="20%"align="right">
+<img src="https://github.com/user-attachments/assets/afa77282-a05f-48ed-abaf-a91075be5307" width="46%" height="20%" align="left">
+<img src="https://github.com/user-attachments/assets/c36b0f17-6a0a-41f1-8568-a2679dcc6292" width="46%" height="20%"align="right">
 
 ---
 
