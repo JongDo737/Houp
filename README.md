@@ -203,7 +203,7 @@ devops/
     └── 다빈도질병통계_질별연령별80세구간별_2023_입원.xlsx
 ```
 ## 인프라 아키텍처
-<img src="https://github.com/user-attachments/assets/d799f0d3-2694-4d85-a9e2-48fe869218de" width="70%" height="40%">
+<img src="https://github.com/user-attachments/assets/d799f0d3-2694-4d85-a9e2-48fe869218de" width="90%" height="40%">
 
 ## 개발 기간
 * `2024-06-26 ~ 2024-08-12`
