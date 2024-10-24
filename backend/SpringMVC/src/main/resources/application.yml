@@ -1,0 +1,25 @@
+logging:
+  level:
+    com.example.houp : debug
+    org.springframework.web.servlet : debug
+    org.hibernate.type.descriptor.sql: trace
+
+feign:
+  client:
+    toAI:
+      base-url: https://c0gv5qjgk1.execute-api.ap-northeast-2.amazonaws.com/dev
+      disease:
+        name: diseaseInfoFromAI
+        disease-url: /disease-predictions
+      report:
+        name: reportInfoFromAI
+        report-url: /judgment-Documents
+    toComwel:
+      name: communication-to-comwel
+      base-url: http://apis.data.go.kr/B490001/jilbyeongPstateInfoService
+      get-report-url: /getJilbyeongResultNaeyongPstate
+      service-key: jByJ1PQYKu7iPGEwYPBKvBzJZl83YJIv5rNhZcB5fP6eKQNh%2BCnLds%2BjvW2TQShYVAHq1E1ssHV5MreOyVKZeg%3D%3D
+    config:
+      default:
+        loggerLever: FULL
+
