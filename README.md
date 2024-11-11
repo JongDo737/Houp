@@ -175,6 +175,77 @@ https://youtu.be/f80cOfu-WbQ
 ```
 
 ```
+  ├─ backend.SpringWebflux.houp.src.main
+      ├─java
+      │  └─com
+      │      └─example
+      │          └─houp
+      │              ├─ HoupApplication.java
+      │              ├─advice
+      │              │ ├─ BadRequestException.java
+      │              │ ├─ BusinessException.java
+      │              │ ├─ ControllerAdvice.java
+      │              │ ├─ ErrorResponse.java
+      │              │ └─ NotFoundException.java     
+      │              ├─support
+      │              │ ├─ config
+      │              │ │  ├─ WebClientConfig.java
+      │              │ │  ├─ WebFluxConfig.java      
+      │              │ ├─ properties
+      │              │ │ ├─ toai
+      │              │ │ │  ├─ Disease.java
+      │              │ │ │  ├─ Report.java
+      │              │ │ │  ├─ ToAiProperties.java  
+      │              │ │ └─ tocomwel
+      │              │ │    └─ ToComwelProperties.java      
+      │              │ └─ util
+      │              │    ├─ KindValidator.java
+      │              │    └─ RequestValidator.java       
+      │              ├─ toclient
+      │              │  ├─dto
+      │              │  │ ├─ JudgementDocumentResponse.java
+      │              │  │ ├─ PredictionResponse.java
+      │              │  │ ├─ ReportToClient.java
+      │              │  │ ├─ UserDiseaseInfoRequest.java
+      │              │  │ └─ UserInfoRequest.java
+      │              │  ├─ handler
+      │              │  │ └─ ToClientHandler.java    
+      │              │  ├─ router
+      │              │  │ └─ ToClientRouter.java
+      │              │  ├─ service
+      │              │  │ └─ ToClientService.java
+      │              │  └─ support
+      │              │     └─ exception
+      │              │        ├─ DiseaseKindExceptionByAi.java
+      │              │        ├─ DiseaseRequestException.java
+      │              │        ├─ DiseaseResponseByAiException.java
+      │              │        ├─ DiseaseResponseBySeverException.java
+      │              │        ├─ JobKindExceptionByAi.java
+      │              │        ├─ JudgeDocRequestException.java
+      │              │        ├─ JudgeDocResponseByAiException.java
+      │              │        └─ JudgeDocResponseBySeverException.java            
+      │              └─ tocomwel
+      │                  ├─ dto
+      │                  │  ├─ CaseExamples.java
+      │                  │  ├─ ReportToObject.java
+      │                  │  └─ StrategyResult.java    
+      │                  ├─ service
+      │                  │  └─ ToComwelService.java   
+      │                  └─ support
+      │                     ├─  DiseaseJobTypeStrategy.java
+      │                     ├─  JobStrategy.java
+      │                     ├─  JobTypeStrategy.java
+      │                     ├─  ReportStrategy.java
+      │                     ├─  TypeStrategy.java 
+      │                     └─ exception
+      │                        ├─ DiseaseKindExceptionByUser.java
+      │                        └─ JobKindExceptionByUser.java
+      │                                
+      └─resources
+              application.yml
+```
+
+```
 devops/
 ├── README.md
 ├── ai
